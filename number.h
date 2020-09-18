@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <initializer_list>
 #include <algorithm>
 #include <ctime>
 #include <random>
