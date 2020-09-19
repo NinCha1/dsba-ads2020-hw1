@@ -25,11 +25,12 @@ void Average(size_t n, std::ostream& out)
         Multiplicator::Karatsuba(P);
         double end3 = clock();
         time3 += ((end3-start3)/ CLOCKS_PER_SEC);
-
-        time1 /= 3.0;
-        time2 /= 3.0;
-        time3 /= 3.0;
     }
+
+    time1 /= 3.0;
+    time2 /= 3.0;
+    time3 /= 3.0;
+
     out << n << ',' << time1 << ',' << time2 << ',' << time3 << '\n';
 }
 
@@ -45,8 +46,8 @@ int main()
     std::cout << P.first << P.second;
 
 
-std::ofstream data(R"(C:\Users\ninou\Desktop\HSE2019-2020\BigHW\table.csv)");
-for(int i = 1; i < 100; i++)
-    Average(i, data);
+    std::ofstream data(R"(C:\Users\ninou\Desktop\HSE2019-2020\BigHW\table.csv)");
+    for(int i = 1; i < 100; i++)
+        Average(i, data);
     return 0;
 }
